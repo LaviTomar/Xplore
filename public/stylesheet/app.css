@@ -1,0 +1,44 @@
+#cluster-map {
+    width: 100%;
+    height: 700px;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+}
+
+/* #show {
+    background-color: #34495E;
+} */
+
+.fixed-btn{
+    position: fixed;
+    bottom: 10%;
+    right: 50%;
+    background: white;
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+  /*   border-radius: 3px; */
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 4px 4px 4px #0a78aa;
+    cursor: pointer;
+  }
+  
+  .fixed-btn p{
+    text-transform: uppercase;
+    font-family: arial;
+    font-weight: 900;
+    color: black;
+  }
+  
+  .fixed-btn:active{
+    box-shadow: 0  0;
+  }
+
+  .fixed-btn:hover{
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+  }

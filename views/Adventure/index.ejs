@@ -1,0 +1,42 @@
+<% layout('layouts/boilerplate')%>
+
+
+<h1>All Adventure Sites</h1>
+<!-- <div>
+    <a href="/adventureSite/new">Add New Site</a>
+</div> -->
+<div class="container " id="show">
+<% for (let site of sites){%>
+<div class="card mb-3" >
+    <div class="row">
+        <div class="col-md-4">
+            <%if(site.images.length) {%>
+                <img class="img-fluid" alt="" src="<%=site.images[0].url%>">
+                <% }else {%>
+                <img class="img-fluid" alt=""
+                    src="https://res.cloudinary.com/djud9fq8h/image/upload/v1686832836/Xplore/eetsg0xvszahoohkiw3b.jpg">
+                <% } %>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title"><%= site.title %> </h5>
+                <p class="card-text"><%= site.description %></p>
+                <p class="card-text">
+                    <small class="text-muted"><%= site.location%></small>
+                </p>
+                <a class="btn btn-primary" href="/adventureSite/<%=site._id%>">View <%=site.title%></a>
+            </div>
+        </div>
+    </div>
+</div>
+<% }%>
+
+  
+
+</div>
+
+
+<div class="fixed-btn">
+    <a href="/adventureSite/map" style="text-decoration: none;"><p>SHOW MAP</p></a>
+  </div>
+  
