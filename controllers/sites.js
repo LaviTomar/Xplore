@@ -60,7 +60,7 @@ module.exports.renderEditForm = async (req, res) => {
 
 module.exports.updateSite = async (req, res) => {
     const { id } = req.params;
-    console.log(req.body);
+    // console.log(req.body);
     const site = await adventureSites.findByIdAndUpdate(id, { ...req.body.site });
     const imgs = req.files.map(f => ({ url: f.path, filename: f.filename }));
     site.images.push(...imgs)
