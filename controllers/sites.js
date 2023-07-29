@@ -30,7 +30,6 @@ module.exports.createSite = async (req, res, next) => {
     site.images = req.files.map(f => ({ url: f.path, filename: f.filename }));
     site.author = req.user._id;
     await site.save();  
-    console.log(site);
     req.flash('success', 'Successfully made a new site!');
     res.redirect(`/adventureSite/${site._id}`)
 }
